@@ -1,0 +1,57 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="WBG+%rb34{hj`eto=nGs">som</variable>
+    <variable type="" id="s1a;b6Qvp6AUv@oa$f.O">i</variable>
+    <variable type="" id="EB|(RgD2Qc7X9Rmd~k.Q">evenGetal</variable>
+  </variables>
+  <block type="variables_set" id="zekj[b3,CR%lAz6,*w+#" x="384" y="59">
+    <field name="VAR" id="WBG+%rb34{hj`eto=nGs" variabletype="">som</field>
+    <value name="VALUE">
+      <block type="math_number" id="g$_@X1{7VD_BA=YZu[Hj">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <next>
+      <block type="controls_for" id="kh=^sykyb5VP_%mLwx?x">
+        <field name="VAR" id="EB|(RgD2Qc7X9Rmd~k.Q" variabletype="">evenGetal</field>
+        <value name="FROM">
+          <block type="math_number" id="Wg_y^m;P~XEB{YwWozQ:">
+            <field name="NUM">2</field>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="math_number" id="@T;vD)I.U5lCFHZ6!C.H">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+        <value name="BY">
+          <block type="math_number" id="DZ@=ZuhBS{Q7=TC7ld!)">
+            <field name="NUM">2</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="math_change" id="mF12%*wjNTSAhlUC/e[z">
+            <field name="VAR" id="WBG+%rb34{hj`eto=nGs" variabletype="">som</field>
+            <value name="DELTA">
+              <shadow type="math_number" id="l/rs]8E,QvTFcn~nV3T@">
+                <field name="NUM">1</field>
+              </shadow>
+              <block type="variables_get" id="G_%e_a(*K#.jggBEkD2z">
+                <field name="VAR" id="EB|(RgD2Qc7X9Rmd~k.Q" variabletype="">evenGetal</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <next>
+          <block type="text_print" id="1Bf6LY4CSf_h8HFVWJM5">
+            <value name="TEXT">
+              <block type="variables_get" id="SRn:{6$C)D7i+-*SrGA$">
+                <field name="VAR" id="WBG+%rb34{hj`eto=nGs" variabletype="">som</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

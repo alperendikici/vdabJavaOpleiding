@@ -1,0 +1,55 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="ubx:TwZib_kQNm0o7eWY">lengte</variable>
+    <variable type="" id="Y}.t^d+Mc=SV]RCagblD">breedte</variable>
+  </variables>
+  <block type="variables_set" id="J,h5rseoPbk*n{}RxFX:" x="441" y="96">
+    <field name="VAR" id="ubx:TwZib_kQNm0o7eWY" variabletype="">lengte</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="4__;UfM)4{D=HrrqBoK8">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="k~`UXT;xZxyn2tmU+SYc">
+            <field name="TEXT"></field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="rs*)Op`lk1|.G+U6AFn;">
+        <field name="VAR" id="Y}.t^d+Mc=SV]RCagblD" variabletype="">breedte</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="OpjOj|3]iB,y-xI`Sy;x">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <block type="text" id="b}2f1F_kwo$Kn#d/6Q#b">
+                <field name="TEXT"></field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="text_print" id="QOO9?$BOhFTf9Y?mB]ZA">
+            <value name="TEXT">
+              <block type="math_arithmetic" id="dra!|Xm/fi[_xB9v$Oky">
+                <field name="OP">MULTIPLY</field>
+                <value name="A">
+                  <block type="variables_get" id="q:+g^oDtw-@=a8{VU@8x">
+                    <field name="VAR" id="ubx:TwZib_kQNm0o7eWY" variabletype="">lengte</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="variables_get" id="`tXsPcqk,FQQG:eE-L4-">
+                    <field name="VAR" id="Y}.t^d+Mc=SV]RCagblD" variabletype="">breedte</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,144 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="eV59HSk.f%{/YX(fZT*1">kinderen</variable>
+    <variable type="" id="xipYNznImd~fDy,Gbz3n">wedde</variable>
+    <variable type="" id="[)|:adx38Gm6#UPOmszY">jaar</variable>
+  </variables>
+  <block type="variables_set" id="XXLKy`AxhB0|v;I~=)Ko" x="569" y="-104">
+    <field name="VAR" id="[)|:adx38Gm6#UPOmszY" variabletype="">jaar</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="w+d%nvx.A$kGo]VnT7|,">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="0TPAUJ,U?n3m2VKFMhxi">
+            <field name="TEXT">Wat is het jaar?</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="controls_if" id="Np!9:|x+:t)qU(b81h$4">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="rpIw${4:G5},NR1r~6SV">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="math_modulo" id="UGI3Jcw|w1yZ8qD/o4Sh">
+                <value name="DIVIDEND">
+                  <block type="variables_get" id="tT=/7)k8tUhDuaZcU9O9">
+                    <field name="VAR" id="[)|:adx38Gm6#UPOmszY" variabletype="">jaar</field>
+                  </block>
+                </value>
+                <value name="DIVISOR">
+                  <block type="math_number" id="Qbrz7o6pY9vW98e?0U@l">
+                    <field name="NUM">4</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id=")8.B@iKfk]|Dl5LFz4Xy">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_if" id="ADgC6ul@ZZY[$syZ23{*">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="T8qA]h`L^][fk5KU3zG)">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="math_modulo" id="=#([[J69#`#ttoY0#47[">
+                    <value name="DIVIDEND">
+                      <block type="variables_get" id=".;8dCM6B?l*EmvIRifB(">
+                        <field name="VAR" id="[)|:adx38Gm6#UPOmszY" variabletype="">jaar</field>
+                      </block>
+                    </value>
+                    <value name="DIVISOR">
+                      <block type="math_number" id=";MHzz+(vHaef7kcfQ7+L">
+                        <field name="NUM">100</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="2LdGZsfm08s`NI4l#?CT">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="controls_if" id="u9#:wr}^w[~wy2m6X,*r">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_compare" id="ifVaSDB8BFSCnX1!dn|P">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="math_modulo" id="ol]RKKpitRVT7uUQT7U(">
+                        <value name="DIVIDEND">
+                          <block type="variables_get" id="=]R(@1=zL@)w+ZX3sSQ,">
+                            <field name="VAR" id="[)|:adx38Gm6#UPOmszY" variabletype="">jaar</field>
+                          </block>
+                        </value>
+                        <value name="DIVISOR">
+                          <block type="math_number" id="zXLgts?U@Nd,gf)RS2vg">
+                            <field name="NUM">400</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="uYHqd~tXV*TK-Ms!$K3E">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="text_print" id="$pt#wS]Uh)LfqtZiS0gI">
+                    <value name="TEXT">
+                      <block type="text" id="FNh^6zC|I?(IKNqvBpED">
+                        <field name="TEXT">Schrikkeljaar.</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="text_print" id="NkD9B6/X9sj{mefGf|rn">
+                    <value name="TEXT">
+                      <block type="text" id="nqfsDe{xCUm`y^]_*_Qv">
+                        <field name="TEXT">Geen schrikkeljaar.</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="text_print" id="UlIgdo6TrEpu2v_e*:`H">
+                <value name="TEXT">
+                  <block type="text" id="P=H!%QQPl/_7vE!aPN~X">
+                    <field name="TEXT">Schrikkeljaar.</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="text_print" id="MM{EpFdx^)W6^!Zz^*ib">
+            <value name="TEXT">
+              <block type="text" id="wrU(0w6SwoPJCRuR6wq?">
+                <field name="TEXT">Geen schrikkeljaar.</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

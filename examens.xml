@@ -1,0 +1,188 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="A[hEzwM2^yf*7A4n$hLU">wiskunde</variable>
+    <variable type="" id="eA](2XOdJLlG2XXxxte5">boekhouden</variable>
+    <variable type="" id="5HiV{Q8pK0RM*gytKAxZ">informatica</variable>
+    <variable type="" id="vn$JQc~4{S^6E421cr=v">totaalBoekEnInfo</variable>
+  </variables>
+  <block type="variables_set" id="F[0gg[]d$3{[H9,XIxC9" x="386" y="134">
+    <field name="VAR" id="A[hEzwM2^yf*7A4n$hLU" variabletype="">wiskunde</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="NTS$kI-^jT.xF{)]XG*@">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="{7]8oaun{R~uNyURpcpq">
+            <field name="TEXT">Wat is uw score van wiskunde?</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="=H8RJwP]d?#WJrHbQ$WA">
+        <field name="VAR" id="eA](2XOdJLlG2XXxxte5" variabletype="">boekhouden</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="0*3{h2|Q-`*621}~JZU5">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <block type="text" id="_kCFkh]bd+yaA:IbRehk">
+                <field name="TEXT">Wat is uw score van boekhouden?</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="4G:,k2@U*PfZGZA#Eo35">
+            <field name="VAR" id="5HiV{Q8pK0RM*gytKAxZ" variabletype="">informatica</field>
+            <value name="VALUE">
+              <block type="text_prompt_ext" id="+P{pYk3x4$Dt}J,mIomL">
+                <mutation type="NUMBER"></mutation>
+                <field name="TYPE">NUMBER</field>
+                <value name="TEXT">
+                  <block type="text" id="hio0yyfpc@5Q1!s6+sc2">
+                    <field name="TEXT">Wat is uw score van informatica?</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="]wKdvr9a|dg(#[(qv`h^">
+                <field name="VAR" id="vn$JQc~4{S^6E421cr=v" variabletype="">totaalBoekEnInfo</field>
+                <value name="VALUE">
+                  <block type="math_arithmetic" id="(*4uhI0~HX#ru7cFr-ar">
+                    <field name="OP">ADD</field>
+                    <value name="A">
+                      <block type="variables_get" id="!VpMO(83v]tfCi8Z9yl2">
+                        <field name="VAR" id="eA](2XOdJLlG2XXxxte5" variabletype="">boekhouden</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="variables_get" id="-]13?kv0,xLAZP~zz5y%">
+                        <field name="VAR" id="5HiV{Q8pK0RM*gytKAxZ" variabletype="">informatica</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if" id="i,SwI~%KEc(J9QzO~]|z">
+                    <mutation else="1"></mutation>
+                    <value name="IF0">
+                      <block type="logic_operation" id="!=a+66|@]wD:LNP)YYt`">
+                        <field name="OP">AND</field>
+                        <value name="A">
+                          <block type="logic_compare" id="Xsu`z4c+eaa@)dTRRlWV">
+                            <field name="OP">GTE</field>
+                            <value name="A">
+                              <block type="variables_get" id="Yz~HO#Fu50,;6{5RMv|_">
+                                <field name="VAR" id="A[hEzwM2^yf*7A4n$hLU" variabletype="">wiskunde</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="r,A1QW91{:Jt=mZ}749W">
+                                <field name="NUM">6</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="logic_compare" id="$+|t.C4YRN~O^|KcpRd]">
+                            <field name="OP">GTE</field>
+                            <value name="A">
+                              <block type="variables_get" id="DTN-e|L#n4Xl)n=eubSo">
+                                <field name="VAR" id="vn$JQc~4{S^6E421cr=v" variabletype="">totaalBoekEnInfo</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="BWd5cF+374#/`~?Qy0s7">
+                                <field name="NUM">12</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="text_print" id="xbFQ9jRAaH!L^T7=UeQz">
+                        <value name="TEXT">
+                          <block type="text" id="zmvE$Bl`11qq*?/=26LM">
+                            <field name="TEXT">Geslaagd.</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="text_print" id="KK8BkDpIxikXUhyQ(qsT">
+                        <value name="TEXT">
+                          <block type="text" id="NQ)]94C-_WWyBEe*b7lA">
+                            <field name="TEXT">Niet geslaagd.</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="controls_if" id="HHG`vxaOA_-A/lb/J/`^">
+                            <value name="IF0">
+                              <block type="logic_compare" id="s(6[MClH~$,E|6YR61*P">
+                                <field name="OP">LT</field>
+                                <value name="A">
+                                  <block type="variables_get" id="0[=z#|/fhb/=+C8n2lu*">
+                                    <field name="VAR" id="A[hEzwM2^yf*7A4n$hLU" variabletype="">wiskunde</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id="u{m$liw8Bm{g43E%.@!T">
+                                    <field name="NUM">6</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="text_print" id="5d{#`*k[[T%BN9~0cj].">
+                                <value name="TEXT">
+                                  <block type="text" id="0EHI`/`5DCBtnb5gYIJ6">
+                                    <field name="TEXT">Onvoldoende voor wiskunde</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="controls_if" id="(on-m!/MD%Fr]@vxSKut">
+                                <value name="IF0">
+                                  <block type="logic_compare" id="@f:3?@*3cTRC4X1{26o|">
+                                    <field name="OP">LT</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="d(YgS9*64G:]w5P!qwnd">
+                                        <field name="VAR" id="vn$JQc~4{S^6E421cr=v" variabletype="">totaalBoekEnInfo</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="7,ziS@F_Prz]@2b^Z[M0">
+                                        <field name="NUM">12</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="text_print" id="`u3r[_liAF,Mpn8l:P-f">
+                                    <value name="TEXT">
+                                      <block type="text" id="zhSW)~BM%s+Is3LH/y`)">
+                                        <field name="TEXT">Onvoldoende voor boekhouden en informatica samen.</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </statement>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

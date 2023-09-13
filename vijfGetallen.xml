@@ -1,0 +1,174 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="VpTdZ-,9~a#6v#*Abo}~">getal</variable>
+    <variable type="" id="d97I_06%q#kKx{XonA0$">grootste</variable>
+    <variable type="" id="(2,Y+Z#E[uh/^5z6bj)B">kleinste</variable>
+    <variable type="" id="hm;u88mxkS)C`6MpYwrp">teller</variable>
+    <variable type="" id="bCG%EV$n-oDJTr)-!MU_">i</variable>
+  </variables>
+  <block type="variables_set" id=",(E=Z?=T![G2aMG0g]i." x="590" y="67">
+    <field name="VAR" id="VpTdZ-,9~a#6v#*Abo}~" variabletype="">getal</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="q$}ixzkB!nZ!X)V5:kSM">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="2ui~~_vDmA:jNQK@UI$t">
+            <field name="TEXT">Getal (5 keer)</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="_xDcC5eGS,pzp8HBuVtq">
+        <field name="VAR" id="d97I_06%q#kKx{XonA0$" variabletype="">grootste</field>
+        <value name="VALUE">
+          <block type="variables_get" id="VXpH9/rY1|Y]!rMH:c$X">
+            <field name="VAR" id="VpTdZ-,9~a#6v#*Abo}~" variabletype="">getal</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="y?APoATZXsvr,Xi!vFX=">
+            <field name="VAR" id="(2,Y+Z#E[uh/^5z6bj)B" variabletype="">kleinste</field>
+            <value name="VALUE">
+              <block type="variables_get" id="I#[3SQ*uE~Tx|b{JzAGw">
+                <field name="VAR" id="VpTdZ-,9~a#6v#*Abo}~" variabletype="">getal</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_for" id="btR3[B7jRCZljZ9W6T]e">
+                <field name="VAR" id="hm;u88mxkS)C`6MpYwrp" variabletype="">teller</field>
+                <value name="FROM">
+                  <block type="math_number" id="q,YvIef=G70sD:/ItpRQ">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+                <value name="TO">
+                  <block type="math_number" id="5?/eLVRd3ukCZ%XYoUGs">
+                    <field name="NUM">4</field>
+                  </block>
+                </value>
+                <value name="BY">
+                  <block type="math_number" id="?lahfzLk}+MC1jh{]Hl?">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="variables_set" id="j(Q?yaO_8L=vB]CpzgRL">
+                    <field name="VAR" id="VpTdZ-,9~a#6v#*Abo}~" variabletype="">getal</field>
+                    <value name="VALUE">
+                      <block type="text_prompt_ext" id="vaYZv!HwK(mvlQdy[OUh">
+                        <mutation type="NUMBER"></mutation>
+                        <field name="TYPE">NUMBER</field>
+                        <value name="TEXT">
+                          <block type="text" id="Rz6nl!~0E9HF{8CIqq1s">
+                            <field name="TEXT">Getal:</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="controls_if" id="z2Mxi(.HU;ijOBp5Xf,7">
+                        <mutation else="1"></mutation>
+                        <value name="IF0">
+                          <block type="logic_compare" id="t7!cads2KgCQ[o,qiy_Z">
+                            <field name="OP">GT</field>
+                            <value name="A">
+                              <block type="variables_get" id="}sA|e.JNB?(m%7n=Y+K6">
+                                <field name="VAR" id="VpTdZ-,9~a#6v#*Abo}~" variabletype="">getal</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="variables_get" id="l*~V*H]D}.?-kWZW)^0a">
+                                <field name="VAR" id="d97I_06%q#kKx{XonA0$" variabletype="">grootste</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="variables_set" id="5eZ3hd44SQz/SNAJn9=]">
+                            <field name="VAR" id="d97I_06%q#kKx{XonA0$" variabletype="">grootste</field>
+                            <value name="VALUE">
+                              <block type="variables_get" id=")bLE|rbjB2L%hd,A;pv!">
+                                <field name="VAR" id="VpTdZ-,9~a#6v#*Abo}~" variabletype="">getal</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <statement name="ELSE">
+                          <block type="controls_if" id="QD=x.`g.nRHJQ+|bk]KL">
+                            <value name="IF0">
+                              <block type="logic_compare" id="m=S=r3VCp@+:dX@DIqWt">
+                                <field name="OP">LT</field>
+                                <value name="A">
+                                  <block type="variables_get" id="``a$ezm`^HYwtwCa[eQQ">
+                                    <field name="VAR" id="VpTdZ-,9~a#6v#*Abo}~" variabletype="">getal</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="variables_get" id="TU_IxbH,]`zm~+h4;:?4">
+                                    <field name="VAR" id="(2,Y+Z#E[uh/^5z6bj)B" variabletype="">kleinste</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="variables_set" id="$fb*D6H9^Fz$+/EX-z48">
+                                <field name="VAR" id="(2,Y+Z#E[uh/^5z6bj)B" variabletype="">kleinste</field>
+                                <value name="VALUE">
+                                  <block type="variables_get" id="=NgyA)]mF9*2G+#3E%$N">
+                                    <field name="VAR" id="VpTdZ-,9~a#6v#*Abo}~" variabletype="">getal</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="text_print_sameline" id="(eoQdZ,|W^DSGJyTh*Wx">
+                    <value name="TEXT">
+                      <block type="text" id="jOJ^M(3`Hmn^*?FAjYMM">
+                        <field name="TEXT">Grootste: </field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="text_print" id="m.LaV{~rc%H2tr5-Y*5T">
+                        <value name="TEXT">
+                          <block type="variables_get" id="zL6V#tytKZiitGI-[CDv">
+                            <field name="VAR" id="d97I_06%q#kKx{XonA0$" variabletype="">grootste</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="text_print_sameline" id="ks.QRG@#U2v[Qg!WZh8y">
+                            <value name="TEXT">
+                              <block type="text" id="%]Lf#v:@3aO_{,l?]-OQ">
+                                <field name="TEXT">Kleinste: </field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="text_print" id="pDEC=L2[1WgB9U5Cyp)j">
+                                <value name="TEXT">
+                                  <block type="variables_get" id="(pszO53K=]8Z9x,RySa_">
+                                    <field name="VAR" id="(2,Y+Z#E[uh/^5z6bj)B" variabletype="">kleinste</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,317 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="*M,]@8qBz[TSX()wWxK1">kinderen</variable>
+    <variable type="" id="`+6/M1MNPN46P-n{@uPT">wedde</variable>
+    <variable type="" id="R/dNfk9eby#dUYHo`Djx">kindergeld</variable>
+  </variables>
+  <block type="variables_set" id="~mE+I]gG-3O+=|r~biiF" x="471" y="169">
+    <field name="VAR" id="*M,]@8qBz[TSX()wWxK1" variabletype="">kinderen</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="?CJ6Ft_43^3V(=3jU%uc">
+        <mutation type="TEXT"></mutation>
+        <field name="TYPE">TEXT</field>
+        <value name="TEXT">
+          <block type="text" id="xp9lJ}LX2l_6R[)|*m,%">
+            <field name="TEXT">Hoeveel kinderen heb je?</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="y/!0IKcf8b[iF%/*;bi~">
+        <field name="VAR" id="`+6/M1MNPN46P-n{@uPT" variabletype="">wedde</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id=",-6|PN)6etvMaiQ42-+_">
+            <mutation type="TEXT"></mutation>
+            <field name="TYPE">TEXT</field>
+            <value name="TEXT">
+              <block type="text" id="pI:;74^5C^`[^AL:r;V1">
+                <field name="TEXT">Hoeveel wedde heb je?</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="E1jy7Gvj:_Qk!_j]29?t">
+            <field name="VAR" id="R/dNfk9eby#dUYHo`Djx" variabletype="">kindergeld</field>
+            <value name="VALUE">
+              <block type="math_arithmetic" id="]h],r9`9$UbKkB)aTw1@">
+                <field name="OP">MULTIPLY</field>
+                <value name="A">
+                  <block type="variables_get" id=",tICXg-C4Ey_=F8h}u[%">
+                    <field name="VAR" id="*M,]@8qBz[TSX()wWxK1" variabletype="">kinderen</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="-g$A9eFtc3d-bk:KDpuz">
+                    <field name="NUM">25</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="ycq,`+,fml{[6VaMQ%3_">
+                <value name="IF0">
+                  <block type="logic_compare" id="nM|ug#cCBz.,l(9Aj.m6">
+                    <field name="OP">GTE</field>
+                    <value name="A">
+                      <block type="variables_get" id="!h}k4gL3$#r#3F@klN+n">
+                        <field name="VAR" id="*M,]@8qBz[TSX()wWxK1" variabletype="">kinderen</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="`;`%op$bKe{JqG_FQG:d">
+                        <field name="NUM">3</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="variables_set" id="o3|F)(#bah@H/LE+P~6e">
+                    <field name="VAR" id="R/dNfk9eby#dUYHo`Djx" variabletype="">kindergeld</field>
+                    <value name="VALUE">
+                      <block type="math_arithmetic" id="c[6*4I@4t|AU=b.EeQi1">
+                        <field name="OP">ADD</field>
+                        <value name="A">
+                          <block type="variables_get" id="S`QChc-0v6W*4_;D6e+S">
+                            <field name="VAR" id="R/dNfk9eby#dUYHo`Djx" variabletype="">kindergeld</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_arithmetic" id="?u:jSwXeaS*?@bWJ2#lB">
+                            <field name="OP">MULTIPLY</field>
+                            <value name="A">
+                              <block type="math_arithmetic" id=")~{Ukb[OZUjU.i1D1lfD">
+                                <field name="OP">MINUS</field>
+                                <value name="A">
+                                  <block type="variables_get" id="G7}Nv0(AHILhMf8XYX_?">
+                                    <field name="VAR" id="*M,]@8qBz[TSX()wWxK1" variabletype="">kinderen</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id="/N6L!CXwLn/%Epw]MdX+">
+                                    <field name="NUM">2</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="TR1EnbO@Z{G98S5Y^9vy">
+                                <field name="NUM">12.5</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="controls_if" id="9pmZq@y@4+WpSn8@m40-">
+                        <value name="IF0">
+                          <block type="logic_compare" id="Z8*SAI/P3vb3fKxMb2@a">
+                            <field name="OP">GTE</field>
+                            <value name="A">
+                              <block type="variables_get" id="$383@H6OHXKiu2z$DDGp">
+                                <field name="VAR" id="*M,]@8qBz[TSX()wWxK1" variabletype="">kinderen</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="(4|jjFYG4`7o9Kcs1E8m">
+                                <field name="NUM">5</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="variables_set" id="lFO@U6:qBz@a:9eYiIsq">
+                            <field name="VAR" id="R/dNfk9eby#dUYHo`Djx" variabletype="">kindergeld</field>
+                            <value name="VALUE">
+                              <block type="math_arithmetic" id="rd8L.U:#f]nrrzJNTlei">
+                                <field name="OP">ADD</field>
+                                <value name="A">
+                                  <block type="variables_get" id="uLdpfxaYee|G;Juv)E;-">
+                                    <field name="VAR" id="R/dNfk9eby#dUYHo`Djx" variabletype="">kindergeld</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_arithmetic" id="!N/Nlwi_(N-zlZ7IGJn^">
+                                    <field name="OP">MULTIPLY</field>
+                                    <value name="A">
+                                      <block type="math_arithmetic" id="JJMEySny:FdSD4,Ki7FT">
+                                        <field name="OP">MINUS</field>
+                                        <value name="A">
+                                          <block type="variables_get" id="u2m~$tUg20:ADOeRt`a/">
+                                            <field name="VAR" id="*M,]@8qBz[TSX()wWxK1" variabletype="">kinderen</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="math_number" id="hg,i,oCh@.()Hg8mO%k*">
+                                            <field name="NUM">4</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="x8Y(q3R.FU0SaZ$hjIEj">
+                                        <field name="NUM">7.5</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="controls_if" id="uq}ACq)mxJwV-j;}dBNU">
+                    <mutation elseif="1"></mutation>
+                    <value name="IF0">
+                      <block type="logic_compare" id="rGC^6}DLe!#($/61(`Lt">
+                        <field name="OP">LTE</field>
+                        <value name="A">
+                          <block type="variables_get" id="m1}%f7Ty2]T|b,==:rwM">
+                            <field name="VAR" id="`+6/M1MNPN46P-n{@uPT" variabletype="">wedde</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="yc.8G}--C=CUD{7h02SR">
+                            <field name="NUM">500</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="variables_set" id="hC@?zZWHxphYxq6l2:Ux">
+                        <field name="VAR" id="R/dNfk9eby#dUYHo`Djx" variabletype="">kindergeld</field>
+                        <value name="VALUE">
+                          <block type="math_arithmetic" id="NWF~sk9gD,qGz|y%d!]t">
+                            <field name="OP">MULTIPLY</field>
+                            <value name="A">
+                              <block type="variables_get" id="Su8[PtT4b`]cDM|m=-lO">
+                                <field name="VAR" id="R/dNfk9eby#dUYHo`Djx" variabletype="">kindergeld</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="q/U5ajHp*M{Dy#nRhSUC">
+                                <field name="NUM">1.25</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <value name="IF1">
+                      <block type="logic_compare" id="+P217v^+$H03|IdnM3=+">
+                        <field name="OP">GT</field>
+                        <value name="A">
+                          <block type="variables_get" id="Xc[~3d|`|+y1znJH(UG$">
+                            <field name="VAR" id="`+6/M1MNPN46P-n{@uPT" variabletype="">wedde</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="t0f7NG(4?Yz!#~7y)$xV">
+                            <field name="NUM">2000</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO1">
+                      <block type="variables_set" id="l2{MLHrn=]%x,8W~YS$;">
+                        <field name="VAR" id="R/dNfk9eby#dUYHo`Djx" variabletype="">kindergeld</field>
+                        <value name="VALUE">
+                          <block type="math_arithmetic" id="mRA;$#~TfD}i@K-LV7dW">
+                            <field name="OP">MULTIPLY</field>
+                            <value name="A">
+                              <block type="variables_get" id="pyfYj}J{FiVjnG0%ZvF0">
+                                <field name="VAR" id="R/dNfk9eby#dUYHo`Djx" variabletype="">kindergeld</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="lek|Ijlh+LI)X)}H/@#r">
+                                <field name="NUM">0.75</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="controls_if" id="9b-{Zr]|TbPPUgsyJnbW">
+                        <value name="IF0">
+                          <block type="logic_compare" id="hZt[3U^r?9e8$~j6-/.H">
+                            <field name="OP">LTE</field>
+                            <value name="A">
+                              <block type="variables_get" id="/#f3n$NwXu}8_1ff:CYW">
+                                <field name="VAR" id="R/dNfk9eby#dUYHo`Djx" variabletype="">kindergeld</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_arithmetic" id="=0x]QCn~6d@fSvMm0q!Z">
+                                <field name="OP">MULTIPLY</field>
+                                <value name="A">
+                                  <block type="variables_get" id="^Bw%=#TFzUWohv4cxsgd">
+                                    <field name="VAR" id="*M,]@8qBz[TSX()wWxK1" variabletype="">kinderen</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id="mi*iq=Zopv}n:6%y#9:]">
+                                    <field name="NUM">25</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="variables_set" id="hv#*eXllP[o+rk$5(QEl">
+                            <field name="VAR" id="R/dNfk9eby#dUYHo`Djx" variabletype="">kindergeld</field>
+                            <value name="VALUE">
+                              <block type="math_arithmetic" id="zG)Q#,83~t=@)=Vn*y`2">
+                                <field name="OP">MULTIPLY</field>
+                                <value name="A">
+                                  <block type="variables_get" id="~aGtYD;]:_IyqpEqzgOD">
+                                    <field name="VAR" id="*M,]@8qBz[TSX()wWxK1" variabletype="">kinderen</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id="cVC`6N?)/R+s@W;@TS6C">
+                                    <field name="NUM">25</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="text_print_sameline" id="GndH_|44e#q4UPs@p}y~">
+                            <value name="TEXT">
+                              <block type="text" id="?*9bR4Y]}gO/[O{}#.`2">
+                                <field name="TEXT">Uw kindergeld is:</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="text_print" id="eL56^kY7A4rB0x]!Q/qA">
+                                <value name="TEXT">
+                                  <block type="variables_get" id="ykxU_]oobOlEk]JOee:]">
+                                    <field name="VAR" id="R/dNfk9eby#dUYHo`Djx" variabletype="">kindergeld</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

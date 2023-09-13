@@ -1,0 +1,48 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="}tp`@!u7ROH/THY?b8`}">straal</variable>
+  </variables>
+  <block type="variables_set" id="UA~cCg=SiTd:]k_iPFq$" x="606" y="136">
+    <field name="VAR" id="}tp`@!u7ROH/THY?b8`}" variabletype="">straal</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="1bB.c6n2_)Tjz7+T~opW">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="bM#:T[i9`b,VU}lZ2}Ab">
+            <field name="TEXT"></field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="text_print" id="+-4/nMgtOqheVD69lkYJ">
+        <value name="TEXT">
+          <block type="math_arithmetic" id="IY[t@eF#Q[zlaY-R!-xU">
+            <field name="OP">MULTIPLY</field>
+            <value name="A">
+              <block type="variables_get" id="F8;?z$%M+W2oCl_y,9cM">
+                <field name="VAR" id="}tp`@!u7ROH/THY?b8`}" variabletype="">straal</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_arithmetic" id="}.F8@_%gPErO#K!,Po=3">
+                <field name="OP">MULTIPLY</field>
+                <value name="A">
+                  <block type="variables_get" id="`#CCA?H8OXX}GXXTONIA">
+                    <field name="VAR" id="}tp`@!u7ROH/THY?b8`}" variabletype="">straal</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="k]hDiB*#F=/(eLVl`e=-">
+                    <field name="NUM">3.14</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,131 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="TkjOH(u{J0#J#W]iw#)!">getal</variable>
+    <variable type="" id="{cJ|2p$F].5|eZ5~n=E$">isGellukige</variable>
+  </variables>
+  <block type="variables_set" id="/WB[0ct#K:0_]C.WjV6W" x="635" y="118">
+    <field name="VAR" id="TkjOH(u{J0#J#W]iw#)!" variabletype="">getal</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="EZYFEV@A@qn+Wzk^=via">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="bG%W!nfz|ujqEYTF];(n">
+            <field name="TEXT">Een getal minder dan 1000:</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="controls_if" id="rXG[H3%9(~?:a(6[9}IW">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_operation" id="aZ(EBNg+I!Wr?P4K8Ei2">
+            <field name="OP">AND</field>
+            <value name="A">
+              <block type="logic_compare" id=")Okd4*C_-XO~!@;tO5,{">
+                <field name="OP">GTE</field>
+                <value name="A">
+                  <block type="variables_get" id="Kl`*{oZer]Ygcin!n~=Y">
+                    <field name="VAR" id="TkjOH(u{J0#J#W]iw#)!" variabletype="">getal</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="0|2mdtD:WhJW|[Lq22b!">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_compare" id="_);Bmr_x`qUWd3k[28w(">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <block type="variables_get" id="9a=+svW5n8e:giz@fN3Z">
+                    <field name="VAR" id="TkjOH(u{J0#J#W]iw#)!" variabletype="">getal</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="j`c]L8:BQ;1lxo@)C%;C">
+                    <field name="NUM">1000</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_if" id="TGpiK0i3.hEgY,sxQ25i">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="0yzwr`(^]E)IjT#eH.x[">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="lw4~i2|6s5AF/bU@YMqI">
+                    <field name="VAR" id="{cJ|2p$F].5|eZ5~n=E$" variabletype="">isGellukige</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_boolean" id="RxfJ_K26*B6s$86eli{~">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="text_print" id="C)A:u=HD?wxIc[eFu@k.">
+                <value name="TEXT">
+                  <block type="text_join" id="ib=x9cf1k-0zg{1Y?CBD">
+                    <mutation items="2"></mutation>
+                    <value name="ADD0">
+                      <block type="variables_get" id="m?$N0dlmNDTopO}ZwZ.@">
+                        <field name="VAR" id="TkjOH(u{J0#J#W]iw#)!" variabletype="">getal</field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="text" id="do3Hjsm]E.f;S0n+ef~]">
+                        <field name="TEXT"> is een gellukige getal.</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="text_print" id="Q.$%h^A*N$+pajsN^s_+">
+                <value name="TEXT">
+                  <block type="text_join" id="m;Awbh@rw_}t|%%P+#p_">
+                    <mutation items="2"></mutation>
+                    <value name="ADD0">
+                      <block type="variables_get" id=";(4/yT|V9jc}c!9(~D!c">
+                        <field name="VAR" id="TkjOH(u{J0#J#W]iw#)!" variabletype="">getal</field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="text" id="C?9v8l8fr*hi7)EBX.RA">
+                        <field name="TEXT"> is geen gellukige getal.</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="text_print" id="(vXx{?B/i*FBF([]C21=">
+            <value name="TEXT">
+              <block type="text" id="AQJ;E{qZ}?EEQY8,C~25">
+                <field name="TEXT">Ongeldige invoer.</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+  <block type="procedures_defreturn" id="b6[rx5SHnp_gQCkZ){_:" x="634" y="445">
+    <field name="NAME">isGellukigGetal</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+  </block>
+</xml>

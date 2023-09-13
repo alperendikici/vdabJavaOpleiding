@@ -1,0 +1,94 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="^Kz3Xsrk9ptyvs2W)jTk">leeftijd</variable>
+    <variable type="" id="C-F/J{*+d.iMB5[.7I*,">volwassenMee</variable>
+  </variables>
+  <block type="variables_set" id="PAk29U4W@S8j_N-)F.iw" x="390" y="159">
+    <field name="VAR" id="^Kz3Xsrk9ptyvs2W)jTk" variabletype="">leeftijd</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id=":qmxe3kG,L+`AEFWfLba">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="wR69+6JNvC=)r?62la0/">
+            <field name="TEXT">Wat is de leeftijd?</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="d[1s$;Vh@W:eyIpiY[/p">
+        <field name="VAR" id="C-F/J{*+d.iMB5[.7I*," variabletype="">volwassenMee</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="gN(FNK4,R_-?zwglig#j">
+            <mutation type="TEXT"></mutation>
+            <field name="TYPE">TEXT</field>
+            <value name="TEXT">
+              <block type="text" id="G14C/+Do!L9yonRK{%AF">
+                <field name="TEXT">Wat is de leeftijd? ja/nee</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id="]C1S5~Wrht-2+n).$,lH">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_operation" id="|2A0D;hAe)=9=/f_tP?%">
+                <field name="OP">OR</field>
+                <value name="A">
+                  <block type="logic_compare" id="P?Jx83lCf[{,qCu_;@F)">
+                    <field name="OP">GTE</field>
+                    <value name="A">
+                      <block type="variables_get" id="Yhm#TiQUog2!oOyg{:Sn">
+                        <field name="VAR" id="^Kz3Xsrk9ptyvs2W)jTk" variabletype="">leeftijd</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="FRlNm`|EuM4ys%Hg4;XV">
+                        <field name="NUM">16</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_compare" id="@wnKw~tizcO*$[xn*:0B">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="#Iu)gIYc~(@s=kVpoG7?">
+                        <field name="VAR" id="C-F/J{*+d.iMB5[.7I*," variabletype="">volwassenMee</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text" id="0Z#k0*@^K;$K.Ey1*7IX">
+                        <field name="TEXT">ja</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="text_print" id="y^Y0tr%N(jH_+E~~(_@8">
+                <value name="TEXT">
+                  <block type="text" id="VYDy-vw[U9~deA,(w5?t">
+                    <field name="TEXT">Welkom in het café.</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="text_print" id="p1,p_3TlT1kByPh`mq!{">
+                <value name="TEXT">
+                  <block type="text" id="PvJRBj.C.;a=d0pS@R_#">
+                    <field name="TEXT">Niet toegaan in het café.</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

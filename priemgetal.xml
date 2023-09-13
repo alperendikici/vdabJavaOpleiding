@@ -1,0 +1,215 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="3.,Tf(`RSQHuG{QsJ#kq">getal</variable>
+    <variable type="" id="VY?RxU~%VqwR_@ijJ_Vq">helft</variable>
+    <variable type="" id="PqtD|d8D8XZ{paiW{2zE">teller</variable>
+  </variables>
+  <block type="variables_set" id="XB$|JNc2smR!@ZNK2x,1" x="682" y="187">
+    <field name="VAR" id="3.,Tf(`RSQHuG{QsJ#kq" variabletype="">getal</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="`){h*K8$1QN{XHv+L!`c">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="3.jTL5M{zz6K-MtKa=t+">
+            <field name="TEXT">Typt uw getal:</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="controls_if" id="WA?@?IHe{LWG$b}b+X_f">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="7S(sx{exv5wPS(MnvNXZ">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="variables_get" id="@4GOMnh=k_s`[X@X]=:T">
+                <field name="VAR" id="3.,Tf(`RSQHuG{QsJ#kq" variabletype="">getal</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="`|pO7;_7PXk:DkX{$*1*">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="text_print" id="VK_CNARo`@#t,ywAJT4H">
+            <value name="TEXT">
+              <block type="text" id="yq:zv|,aN9[Wz}i^%9F.">
+                <field name="TEXT">Dit is geen priemgetal.</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="controls_if" id="s[zmm90o-u|f+cDelIl[">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="~~P75^V-VK.}M,4C6I1c">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <block type="variables_get" id="PvWTl).nSA{*~4}xCs/0">
+                    <field name="VAR" id="3.,Tf(`RSQHuG{QsJ#kq" variabletype="">getal</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="k7iWIc{+HEoINQvmBvRx">
+                    <field name="NUM">4</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="text_print" id="a7zx6,!fWA@CKp!wZS=3">
+                <value name="TEXT">
+                  <block type="text" id="9r[`kj{s$^g7sT}M;DVq">
+                    <field name="TEXT">Dit is een priemgetal.</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="variables_set" id="k|K[{gcO~oO3f$9)PVK;">
+                <field name="VAR" id="VY?RxU~%VqwR_@ijJ_Vq" variabletype="">helft</field>
+                <value name="VALUE">
+                  <block type="math_arithmetic" id="p@rb28ix[eyN+h~ul+@H">
+                    <field name="OP">DIVIDE</field>
+                    <value name="A">
+                      <block type="variables_get" id="@A=a|^yl%ZsBrb$Zh1K6">
+                        <field name="VAR" id="3.,Tf(`RSQHuG{QsJ#kq" variabletype="">getal</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="6~iG.EUL7S++.pF%w{SK">
+                        <field name="NUM">2</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="=T+!VDSgp-pVQz{7Foiz">
+                    <field name="VAR" id="PqtD|d8D8XZ{paiW{2zE" variabletype="">teller</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="!F9O2xN-XLA4n:,UHK;a">
+                        <field name="NUM">2</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="controls_whileUntil" id="GB,O[-GG(dO$veeI%v%x">
+                        <field name="MODE">WHILE</field>
+                        <value name="BOOL">
+                          <block type="logic_operation" id="/ZflJ/,:#gUBV)GX+Ftf">
+                            <field name="OP">AND</field>
+                            <value name="A">
+                              <block type="logic_compare" id=";JG6n0qJ(^eE6Q_by:Fb">
+                                <field name="OP">LT</field>
+                                <value name="A">
+                                  <block type="variables_get" id="K[Tc[)Inqp(N`LYgecU*">
+                                    <field name="VAR" id="PqtD|d8D8XZ{paiW{2zE" variabletype="">teller</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="variables_get" id="5Bk7#$DgdY6n!4eP}Ev-">
+                                    <field name="VAR" id="VY?RxU~%VqwR_@ijJ_Vq" variabletype="">helft</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="logic_compare" id="Wi?$%-|N-gWc!4FG}-z6">
+                                <field name="OP">NEQ</field>
+                                <value name="A">
+                                  <block type="math_modulo" id="12DX$CQI)lhtjwWSI):Q">
+                                    <value name="DIVIDEND">
+                                      <block type="variables_get" id="b#s[=S@IucG3Yn?|0Gio">
+                                        <field name="VAR" id="3.,Tf(`RSQHuG{QsJ#kq" variabletype="">getal</field>
+                                      </block>
+                                    </value>
+                                    <value name="DIVISOR">
+                                      <block type="variables_get" id="]%,INwP~wahvry%,dxg8">
+                                        <field name="VAR" id="PqtD|d8D8XZ{paiW{2zE" variabletype="">teller</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id="gGp{[cH}7wxKAdNBOuQ(">
+                                    <field name="NUM">0</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO">
+                          <block type="math_change" id="z1/FmIBTc@:ALwg,wKyH">
+                            <field name="VAR" id="PqtD|d8D8XZ{paiW{2zE" variabletype="">teller</field>
+                            <value name="DELTA">
+                              <shadow type="math_number" id="EY_ei]L:=-*dH=]EX7Zu">
+                                <field name="NUM">1</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="text_print_sameline" id="UM?1]piRi%KP35z1/`r|">
+                            <value name="TEXT">
+                              <block type="variables_get" id="xq?X^P^e@!O}Wq+w2dp@">
+                                <field name="VAR" id="3.,Tf(`RSQHuG{QsJ#kq" variabletype="">getal</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="controls_if" id="P^^tZub2YE%Rl%$j(=7_">
+                                <mutation else="1"></mutation>
+                                <value name="IF0">
+                                  <block type="logic_compare" id="EI1KCdCtWlF*ABA2T?h!">
+                                    <field name="OP">GT</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="vGP=IZP[QJ^4QsZ1Zq_k">
+                                        <field name="VAR" id="PqtD|d8D8XZ{paiW{2zE" variabletype="">teller</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="variables_get" id="mKY{18zaD:8Qd|w2{_LJ">
+                                        <field name="VAR" id="VY?RxU~%VqwR_@ijJ_Vq" variabletype="">helft</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="text_print_sameline" id="e+Q]iS;qKa[-uRS5dZ#G">
+                                    <value name="TEXT">
+                                      <block type="text" id=".[Cld*NUu^%_I)#**K1t">
+                                        <field name="TEXT"> is een priemgetal.</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </statement>
+                                <statement name="ELSE">
+                                  <block type="text_print_sameline" id="1^5]7QfqwFvJB+@Y+$m=">
+                                    <value name="TEXT">
+                                      <block type="text" id="(RMP/mOrQmLF^R4}78~8">
+                                        <field name="TEXT"> is geen priemgetal.</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </statement>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

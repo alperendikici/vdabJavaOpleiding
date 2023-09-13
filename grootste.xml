@@ -1,0 +1,103 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id=")$`AtmF+Islwv%@.DcQ+">get1</variable>
+    <variable type="" id="XCnHf--d|l0E^uH$5uuU">get2</variable>
+  </variables>
+  <block type="variables_set" id="+Oo3Ne{*VMim?Fq?@f.|" x="462" y="79">
+    <field name="VAR" id=")$`AtmF+Islwv%@.DcQ+" variabletype="">get1</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="X=EriPCHvyhj8wj]P87v">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="i%DNd|LD7;]QAPF`f{S@">
+            <field name="TEXT">Mag ik uw eerste getal?</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="^j?Sq9mF[$|oxY`2aF7N">
+        <field name="VAR" id="XCnHf--d|l0E^uH$5uuU" variabletype="">get2</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id=":R~*X#/x`(utfle;?(|Y">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <block type="text" id="pqsRf5Zoz7=K0:3!{m/N">
+                <field name="TEXT">Mag ik uw tweede getal?</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id="ZM#W9jQ$8YDwGrTMD(4+">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="]|P05Lploth[^bqg?WF2">
+                <field name="OP">GT</field>
+                <value name="A">
+                  <block type="variables_get" id="Dm9Rt*_$Mo}|pwsrE|%v">
+                    <field name="VAR" id=")$`AtmF+Islwv%@.DcQ+" variabletype="">get1</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="variables_get" id="NQ(mADg^n/iNA{f7H?,)">
+                    <field name="VAR" id="XCnHf--d|l0E^uH$5uuU" variabletype="">get2</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="text_print" id="TBM?B7U7m#GWKs~3K2%J">
+                <value name="TEXT">
+                  <block type="variables_get" id="[!;1H2H`OR72sD)@lhw4">
+                    <field name="VAR" id=")$`AtmF+Islwv%@.DcQ+" variabletype="">get1</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="controls_if" id="*iaQHog76*[9#$[BZ/;V">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_compare" id="K5a)8Qh`NF6ae~`l*9@)">
+                    <field name="OP">GT</field>
+                    <value name="A">
+                      <block type="variables_get" id="wL/:cycnZ#~rnGjc_tYM">
+                        <field name="VAR" id="XCnHf--d|l0E^uH$5uuU" variabletype="">get2</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="variables_get" id="$_S~{TbX*w*569eX_f|b">
+                        <field name="VAR" id=")$`AtmF+Islwv%@.DcQ+" variabletype="">get1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="text_print" id="-M=;/of%}ulzI-9%%Kn?">
+                    <value name="TEXT">
+                      <block type="variables_get" id="8~bCMhN-v+eZ#@7E{~!l">
+                        <field name="VAR" id="XCnHf--d|l0E^uH$5uuU" variabletype="">get2</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="text_print" id="JpZAwLD]HGOh3?[eu1,:">
+                    <value name="TEXT">
+                      <block type="text" id="V{$qF)nkcJkr6v*h;uw{">
+                        <field name="TEXT">Gelijk</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

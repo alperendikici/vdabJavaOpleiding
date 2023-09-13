@@ -1,0 +1,75 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="Oli]~Uk5X4lkV5_ao}(Y">y</variable>
+    <variable type="" id="-e#3z2IH26=37Q`xi}:)">vanGetal</variable>
+    <variable type="" id="3qmBXa;4n^(=B`5i1UI]">totGetal</variable>
+    <variable type="" id="$o}KV(YOp$.cP`u*2CYC">getal</variable>
+  </variables>
+  <block type="procedures_callnoreturn_byreference" id="S(|CNGn6)OXv#[?z}bjC" x="760" y="85">
+    <mutation name="tussen">
+      <arg name="vanGetal" type="null"></arg>
+      <arg name="totGetal" type="null"></arg>
+    </mutation>
+    <value name="ARG0">
+      <block type="math_number" id="h*J5m@-}y]_~g?aiF^EI">
+        <field name="NUM">3</field>
+      </block>
+    </value>
+    <value name="ARG1">
+      <block type="math_number" id="_)A~Qn=u[9o;@WsoL-vO">
+        <field name="NUM">5</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="NU$)1Y1(t!+=aE}nY::)">
+        <field name="VAR" id="$o}KV(YOp$.cP`u*2CYC" variabletype="">getal</field>
+      </block>
+    </next>
+  </block>
+  <block type="procedures_defnoreturn_byreference" id="gniPU|d/Zmog*Pix2fPQ" x="761" y="199">
+    <mutation>
+      <arg name="vanGetal"></arg>
+      <arg name="totGetal"></arg>
+    </mutation>
+    <field name="NAME">tussen</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="controls_for" id="6Vi.vjhSj)m|X-z9NtB^">
+        <field name="VAR" id="$o}KV(YOp$.cP`u*2CYC" variabletype="">getal</field>
+        <value name="FROM">
+          <block type="variables_get" id="cJr+H!|t/hr]M3mMCv,+">
+            <field name="VAR" id="-e#3z2IH26=37Q`xi}:)" variabletype="">vanGetal</field>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="variables_get" id=":v,1l@CrxjHF{HS%U}b:">
+            <field name="VAR" id="3qmBXa;4n^(=B`5i1UI]" variabletype="">totGetal</field>
+          </block>
+        </value>
+        <value name="BY">
+          <block type="math_number" id="ck7Mg,vnp*8H,bb8)j*.">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="text_print_sameline" id=")*IX*Of,k9ORkWF;ZE)~">
+            <value name="TEXT">
+              <block type="variables_get" id="^dxQKBj$jYOH|m%`{x:{">
+                <field name="VAR" id="$o}KV(YOp$.cP`u*2CYC" variabletype="">getal</field>
+              </block>
+            </value>
+            <next>
+              <block type="text_print_sameline" id="J=`^,m;-Df_r8=QF,bp4">
+                <value name="TEXT">
+                  <block type="text" id="`49G@HeE9=M/Aiozdv8^">
+                    <field name="TEXT"> </field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>

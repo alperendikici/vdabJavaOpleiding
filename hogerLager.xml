@@ -1,0 +1,161 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="Q{`C3[l@[3q_g$Q5itia">teRadenGetal</variable>
+    <variable type="" id="2:1;(4su)ECfPy_cb)in">getal</variable>
+    <variable type="" id="6`/dOe[(Z{Qg1S$6FjZ@">aantalBeurten</variable>
+  </variables>
+  <block type="variables_set" id="b42B{!DBtBK`]]agj{@/" x="462" y="66">
+    <field name="VAR" id="Q{`C3[l@[3q_g$Q5itia" variabletype="">teRadenGetal</field>
+    <value name="VALUE">
+      <block type="math_random_int" id="-jnOj^P:TI+$0nhFIsQ@">
+        <value name="FROM">
+          <block type="math_number" id="O`YYy5RV~S}qb3ZkEJQ|">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="math_number" id="c7tJ[oYPcJs07W-[1Tii">
+            <field name="NUM">10</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="^.oS{[*U4bLDlFg{X5^|">
+        <field name="VAR" id="2:1;(4su)ECfPy_cb)in" variabletype="">getal</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="2(E`li2,elwNF4phgtR|">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <block type="text" id="S%jp4g~:Jfi!xS;wE(tG">
+                <field name="TEXT">Getal:</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="5;k9nV)!^M-/(gN[3k@b">
+            <field name="VAR" id="6`/dOe[(Z{Qg1S$6FjZ@" variabletype="">aantalBeurten</field>
+            <value name="VALUE">
+              <block type="math_number" id="/J0yt@S~f`s+J.ibmhi3">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_whileUntil" id="aU!Mgky2A)13v8iVJ}8.">
+                <field name="MODE">WHILE</field>
+                <value name="BOOL">
+                  <block type="logic_compare" id="@}FtJa^8A3RNi2YwDY^1">
+                    <field name="OP">NEQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="X09!.y5{o,5:iOZcG=-2">
+                        <field name="VAR" id="2:1;(4su)ECfPy_cb)in" variabletype="">getal</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="variables_get" id="Mu0S]JvSY[N#;zAh2v%!">
+                        <field name="VAR" id="Q{`C3[l@[3q_g$Q5itia" variabletype="">teRadenGetal</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="math_change" id="sc|j8,I@nQU$xE01wgIn">
+                    <field name="VAR" id="6`/dOe[(Z{Qg1S$6FjZ@" variabletype="">aantalBeurten</field>
+                    <value name="DELTA">
+                      <shadow type="math_number" id=").`=v#Aa$mD?b|q,`;._">
+                        <field name="NUM">1</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="controls_if" id="09,2g?px}wosh#kMcQrr">
+                        <mutation else="1"></mutation>
+                        <value name="IF0">
+                          <block type="logic_compare" id="H|y-|hd[K{vg$kk}#QzA">
+                            <field name="OP">LT</field>
+                            <value name="A">
+                              <block type="variables_get" id="PJXHrDXtd_.p;0U6K`VO">
+                                <field name="VAR" id="Q{`C3[l@[3q_g$Q5itia" variabletype="">teRadenGetal</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="variables_get" id="M*ZU4+9VAyf8U+6N}Phf">
+                                <field name="VAR" id="2:1;(4su)ECfPy_cb)in" variabletype="">getal</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="text_print" id=",DwIxrJViI.AzmYL.@BD">
+                            <value name="TEXT">
+                              <block type="text" id="x#?]4WIJ$8XL-u+Mh-e]">
+                                <field name="TEXT">lager</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <statement name="ELSE">
+                          <block type="text_print" id="Sty4NWX)y^o,`$:Nh:Kp">
+                            <value name="TEXT">
+                              <block type="text" id="8Yx+?(xKLMp.NIrj8@Tg">
+                                <field name="TEXT">hoger</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="variables_set" id="CyW@X-e0zV0MDBgMB))r">
+                            <field name="VAR" id="2:1;(4su)ECfPy_cb)in" variabletype="">getal</field>
+                            <value name="VALUE">
+                              <block type="text_prompt_ext" id="8Lm7=%MdY}^D!s6n-^6X">
+                                <mutation type="NUMBER"></mutation>
+                                <field name="TYPE">NUMBER</field>
+                                <value name="TEXT">
+                                  <block type="text" id="$1{H=SSFx6aG_rqm#Xrg">
+                                    <field name="TEXT">Getal:</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="text_print" id="Cz$e(LGlY6zb,NcD+]?Z">
+                    <value name="TEXT">
+                      <block type="text" id="MS,_S0i@2]eh!4kp@H(b">
+                        <field name="TEXT">proficiat</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="text_print_sameline" id="MTUzgDJn~o+h4R_~=(ip">
+                        <value name="TEXT">
+                          <block type="variables_get" id="Av_j;xchKm1ue-NKG3{r">
+                            <field name="VAR" id="6`/dOe[(Z{Qg1S$6FjZ@" variabletype="">aantalBeurten</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="text_print" id="6KlK;7qfEp{jd6u,Mg?i">
+                            <value name="TEXT">
+                              <block type="text" id="@M:]:u,(SJ7.se|J-vD~">
+                                <field name="TEXT"> beurt(en)</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

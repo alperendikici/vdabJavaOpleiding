@@ -1,0 +1,79 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="*m)5rIOyLyo*aRscl[sf">zijde</variable>
+    <variable type="" id="LdZL0BH!2P:7=fhgo7B@">oppervlakte</variable>
+    <variable type="" id=":ju2JgkR[[%TCi^8YLg_">omtrek</variable>
+  </variables>
+  <block type="variables_set" id="-w{pZ,5.2P%5F066l(^e" x="570" y="109">
+    <field name="VAR" id="*m)5rIOyLyo*aRscl[sf" variabletype="">zijde</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="NZ%mHJ!$qK?okDax;hG7">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="p}HcS:Itw]h+v]29Srog">
+            <field name="TEXT">Wat is de zijde van het vierkant?</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="%63=hp9d7/,K2G$Vl4]Y">
+        <field name="VAR" id="LdZL0BH!2P:7=fhgo7B@" variabletype="">oppervlakte</field>
+        <value name="VALUE">
+          <block type="math_arithmetic" id="`/4+ni;Bm[k9..`wzgjV">
+            <field name="OP">MULTIPLY</field>
+            <value name="A">
+              <block type="variables_get" id="l76zH5D1u0IESvsv}]C}">
+                <field name="VAR" id="*m)5rIOyLyo*aRscl[sf" variabletype="">zijde</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="variables_get" id="1}g4CTmFMWb@af85:h:M">
+                <field name="VAR" id="*m)5rIOyLyo*aRscl[sf" variabletype="">zijde</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="um}`{3;G#Fiwa8[JqCEM">
+            <field name="VAR" id=":ju2JgkR[[%TCi^8YLg_" variabletype="">omtrek</field>
+            <value name="VALUE">
+              <block type="math_arithmetic" id="r|bRZPl5K7)+2C+gUlVr">
+                <field name="OP">MULTIPLY</field>
+                <value name="A">
+                  <block type="variables_get" id="GWu_$GlchP`u@fG5`PZf">
+                    <field name="VAR" id="*m)5rIOyLyo*aRscl[sf" variabletype="">zijde</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="uEh{uSU}e`INAcGgg:M!">
+                    <field name="NUM">4</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="text_print" id=";F1+aSCT?E=.WB*ksRRJ">
+                <value name="TEXT">
+                  <block type="variables_get" id="+7upADnLk?;PQ^~:%t9]">
+                    <field name="VAR" id="LdZL0BH!2P:7=fhgo7B@" variabletype="">oppervlakte</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="text_print" id="9@DYH$B$R*3dsg[!XCJ(">
+                    <value name="TEXT">
+                      <block type="variables_get" id="j1B-k._%:X2WyRbcx}y`">
+                        <field name="VAR" id=":ju2JgkR[[%TCi^8YLg_" variabletype="">omtrek</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

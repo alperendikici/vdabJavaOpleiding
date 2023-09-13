@@ -1,0 +1,77 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="d!iNfg,hQQ;26kaj#ES*">leeftijd</variable>
+  </variables>
+  <block type="variables_set" id="Xbfw]-?8CN3Rg:wNV@H," x="535" y="152">
+    <field name="VAR" id="d!iNfg,hQQ;26kaj#ES*" variabletype="">leeftijd</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="Z[4w[JV|+u#-4c.xV1*x">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="YNlOJUOsw{cK-J)WL@hx">
+            <field name="TEXT">Hoe oud ben jij?</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="controls_if" id="{:_C5W#UEZ@]J}rhhqO/">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_operation" id="C=f_?;N6O%pFUyav~m(#">
+            <field name="OP">AND</field>
+            <value name="A">
+              <block type="logic_compare" id="h;i(wpGZ7#IA#a;GfHdQ">
+                <field name="OP">GTE</field>
+                <value name="A">
+                  <block type="variables_get" id="[ac%Zeeg@Oo4P)`=9@(h">
+                    <field name="VAR" id="d!iNfg,hQQ;26kaj#ES*" variabletype="">leeftijd</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="tpU@3*Ey6RLsQ/Fw]]bx">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_compare" id="WFNdXsVwO]=a_f?OclwC">
+                <field name="OP">LTE</field>
+                <value name="A">
+                  <block type="variables_get" id="y]nc_/gkOyLp4H9a6/Ij">
+                    <field name="VAR" id="d!iNfg,hQQ;26kaj#ES*" variabletype="">leeftijd</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="7/@m!awLrLynqGb.]2#y">
+                    <field name="NUM">130</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="text_print" id="~_@@XzTHQzIe~~ELOUU/">
+            <value name="TEXT">
+              <block type="text" id="~es},8^h_5SiJr%B2[*l">
+                <field name="TEXT">OK</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="text_print" id="uSe]X!_Q_P,Yni{V!vk$">
+            <value name="TEXT">
+              <block type="text" id="wF;[6IV8GmCXodIBJeGp">
+                <field name="TEXT">Onmogelijk</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

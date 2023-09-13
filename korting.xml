@@ -1,0 +1,143 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="w-0i%;ma:dU{}uP!vgcH">korting</variable>
+    <variable type="" id="$(5aBL)+]nbjJIWB7zY,">leeftijd</variable>
+  </variables>
+  <block type="variables_set" id="u}jF:ah.`7;xO12fYIqr" x="569" y="59">
+    <field name="VAR" id="w-0i%;ma:dU{}uP!vgcH" variabletype="">korting</field>
+    <value name="VALUE">
+      <block type="math_number" id="+]]U18NR3^_^]#$j,/-?">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="WyX{pRs`M0+mHzG_$Y53">
+        <field name="VAR" id="$(5aBL)+]nbjJIWB7zY," variabletype="">leeftijd</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="Y!e=+j~~En+hmF]OM$44">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <block type="text" id="|4Z6UZT$#1/{0*-E4fOW">
+                <field name="TEXT">Leeftijd (0 om te stoppen):</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="controls_whileUntil" id="7ct3VjU:$,lpnv`|n$dr">
+            <field name="MODE">WHILE</field>
+            <value name="BOOL">
+              <block type="logic_compare" id="OKox:dbVVh-3eKx4C4@Y">
+                <field name="OP">NEQ</field>
+                <value name="A">
+                  <block type="variables_get" id=")q:uy(n.);rpsk^kM]ko">
+                    <field name="VAR" id="$(5aBL)+]nbjJIWB7zY," variabletype="">leeftijd</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="p7,b(Pegw6s=5r=%08vH">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="controls_if" id="!$D7;gg52h2q_VeH[*6(">
+                <value name="IF0">
+                  <block type="logic_operation" id="fvuoO0-EG@FoXK5W~8q6">
+                    <field name="OP">OR</field>
+                    <value name="A">
+                      <block type="logic_compare" id="5@51doO)%aA%i/kp_m4J">
+                        <field name="OP">LT</field>
+                        <value name="A">
+                          <block type="variables_get" id="sM;4uxG`z6q0H95vG41+">
+                            <field name="VAR" id="$(5aBL)+]nbjJIWB7zY," variabletype="">leeftijd</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="H$}0Lx))[M`99$:*?Zf?">
+                            <field name="NUM">7</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="logic_compare" id="DVw9E2*JaM?ZF{$+NM!I">
+                        <field name="OP">GT</field>
+                        <value name="A">
+                          <block type="variables_get" id="isw86}9S7D^7=Z:+Z=]h">
+                            <field name="VAR" id="$(5aBL)+]nbjJIWB7zY," variabletype="">leeftijd</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="jdAd)S,nz%f-Z}yCAaJ}">
+                            <field name="NUM">80</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="variables_set" id="jHzs+mY-TpRL4.vj1Pl}">
+                    <field name="VAR" id="w-0i%;ma:dU{}uP!vgcH" variabletype="">korting</field>
+                    <value name="VALUE">
+                      <block type="math_arithmetic" id="wQjjhM^`Rj98XR{yoM^b">
+                        <field name="OP">ADD</field>
+                        <value name="A">
+                          <block type="variables_get" id="cr?~q%4P^F=ouBr5u_R*">
+                            <field name="VAR" id="w-0i%;ma:dU{}uP!vgcH" variabletype="">korting</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="yhl49,;vXa#SFvQB~VXE">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <next>
+                  <block type="variables_set" id=";hzqti$f7Fh%90t#;j0g">
+                    <field name="VAR" id="$(5aBL)+]nbjJIWB7zY," variabletype="">leeftijd</field>
+                    <value name="VALUE">
+                      <block type="text_prompt_ext" id="N(h[T*v=)`PX4tD$ZhE=">
+                        <mutation type="NUMBER"></mutation>
+                        <field name="TYPE">NUMBER</field>
+                        <value name="TEXT">
+                          <block type="text" id="xjBA=!dG12:U}4:4G4fa">
+                            <field name="TEXT">Leeftijd (0 om te stoppen):</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="text_print_sameline" id="@SKu5LF(7yDwHI!b[wbe">
+                <value name="TEXT">
+                  <block type="text" id="v1UjrZTX6G_NzPSm-$/4">
+                    <field name="TEXT">Aantal bezoekers met korting: </field>
+                  </block>
+                </value>
+                <next>
+                  <block type="text_print" id="hIdoj4=xOtNnLU|+}q@7">
+                    <value name="TEXT">
+                      <block type="variables_get" id="otuhUwbMqa.JG53PtEbB">
+                        <field name="VAR" id="w-0i%;ma:dU{}uP!vgcH" variabletype="">korting</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

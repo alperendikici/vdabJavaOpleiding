@@ -1,0 +1,146 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="aH{8CrV/hhLkOfI_cHkY">get1</variable>
+    <variable type="" id="9RVD$hZc:r7!Zf6mZfz:">get2</variable>
+    <variable type="" id="_=Cce4F.wI_U97fZ%r+(">grootste</variable>
+    <variable type="" id="o~@14h]pArMg.TQ.m[5r">kleinste</variable>
+  </variables>
+  <block type="variables_set" id="V$m_gUR{2QrIJzEHw9=M" x="514" y="50">
+    <field name="VAR" id="aH{8CrV/hhLkOfI_cHkY" variabletype="">get1</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="tQ_5*FJPm5?d@nFnZr`C">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="U.}Fk$YU2F{;|NjUDvfM">
+            <field name="TEXT">Eerste getal:</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="s%E=hsS-Uqduf?;*OGY8">
+        <field name="VAR" id="9RVD$hZc:r7!Zf6mZfz:" variabletype="">get2</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id=".Ws[AwVgL2nr*b^:/B)V">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <block type="text" id="`v)pofSv@W8GuY3W(RXU">
+                <field name="TEXT">Tweede getal:</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if" id="da*enRTNvmEOu(LN~5SY">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="Pm~ZN1iLan~M{I@iX8;M">
+                <field name="OP">GT</field>
+                <value name="A">
+                  <block type="variables_get" id="FyAey3C(vJvzE4`yq1}3">
+                    <field name="VAR" id="aH{8CrV/hhLkOfI_cHkY" variabletype="">get1</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="variables_get" id="oA+Q1H^%,2..EE}QqyQK">
+                    <field name="VAR" id="9RVD$hZc:r7!Zf6mZfz:" variabletype="">get2</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="variables_set" id="qmt{aYe2RWQN;x!rK8|j">
+                <field name="VAR" id="_=Cce4F.wI_U97fZ%r+(" variabletype="">grootste</field>
+                <value name="VALUE">
+                  <block type="variables_get" id="b7ftyK$6ZekNB~bm!9~6">
+                    <field name="VAR" id="aH{8CrV/hhLkOfI_cHkY" variabletype="">get1</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="Jfph6Y/k}osxeKQHWmN5">
+                    <field name="VAR" id="o~@14h]pArMg.TQ.m[5r" variabletype="">kleinste</field>
+                    <value name="VALUE">
+                      <block type="variables_get" id="HSYR2Z$Rz2|kd6m3%b6K">
+                        <field name="VAR" id="9RVD$hZc:r7!Zf6mZfz:" variabletype="">get2</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="variables_set" id="}()RHyTQC8}$s^7~;Y]h">
+                <field name="VAR" id="_=Cce4F.wI_U97fZ%r+(" variabletype="">grootste</field>
+                <value name="VALUE">
+                  <block type="variables_get" id=";JN]wRHCUwP))xoN.#),">
+                    <field name="VAR" id="9RVD$hZc:r7!Zf6mZfz:" variabletype="">get2</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="]6AG(pyxaCU.OK!H$~H3">
+                    <field name="VAR" id="o~@14h]pArMg.TQ.m[5r" variabletype="">kleinste</field>
+                    <value name="VALUE">
+                      <block type="variables_get" id=";^ZyexhV{1_vo=ZXT!L?">
+                        <field name="VAR" id="aH{8CrV/hhLkOfI_cHkY" variabletype="">get1</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="controls_if" id="Um~j~eMh187Sd/.x-LJO">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_compare" id="o3G5+diRbck=swUHN..W">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="variables_get" id="eyT]`E?c0xltjw4Nvdzp">
+                        <field name="VAR" id="o~@14h]pArMg.TQ.m[5r" variabletype="">kleinste</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="[zT=F/DLg~vg1k3ln|Bw">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="text_print" id="D{}E*Io70Q(9(ky._yYs">
+                    <value name="TEXT">
+                      <block type="text" id="p%D,TgzYM?B^Y)ELOWpc">
+                        <field name="TEXT">Delen door 0 onmogelijk</field>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="text_print" id="FC71qbsAWhYlu]zG~7G}">
+                    <value name="TEXT">
+                      <block type="math_arithmetic" id="hSXtaG^Yg7R%:jq-hVJ1">
+                        <field name="OP">DIVIDE</field>
+                        <value name="A">
+                          <block type="variables_get" id="Q7rP[0x6.~8b]5o4.(4g">
+                            <field name="VAR" id="_=Cce4F.wI_U97fZ%r+(" variabletype="">grootste</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="variables_get" id="y#;5UxsT;,BWD)]L6*1J">
+                            <field name="VAR" id="o~@14h]pArMg.TQ.m[5r" variabletype="">kleinste</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

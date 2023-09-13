@@ -1,0 +1,261 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="#eR{+/I[}CbmvF8kwey)">totaalM</variable>
+    <variable type="" id="m@MhjG.j@K``cEgRME)m">totaalV</variable>
+    <variable type="" id="45MuL-jAc)VDd,W|gzle">totaalX</variable>
+    <variable type="" id="Ram_b:+pS{RjU_waLVnB">totaalLeeftijd</variable>
+    <variable type="" id="pW@IfsZXrTj)?L6lFCw8">totaalSurf0</variable>
+    <variable type="" id="yZbkKNQRIU$jC-oRgMN-">totaalSurf1</variable>
+    <variable type="" id="Q!XC@}=cnvl$)HYf3U:}">totaalSurf2</variable>
+    <variable type="" id="D{+5w3,tAwoO]l{IZ.XL">totaalSurf3</variable>
+    <variable type="" id="S0boN}zB{4%L:6pe8GRy">persoonTellen</variable>
+    <variable type="" id="A}(7!Zu1.IrO:*:.*vFZ">item</variable>
+  </variables>
+  <block type="text_print" id="|ViO+eWC]gO)t2@3{b8T" x="650" y="98">
+    <value name="TEXT">
+      <block type="text" id="RKj#}XS6nmZs(*i$](Jt">
+        <field name="TEXT">Surfgedrag bepalen</field>
+      </block>
+    </value>
+    <next>
+      <block type="text_print" id="#$US5{|QZkDUN3BCSPyX">
+        <next>
+          <block type="variables_set" id="]__=c!ANfa1z$?]YY4F2">
+            <field name="VAR" id="#eR{+/I[}CbmvF8kwey)" variabletype="">totaalM</field>
+            <value name="VALUE">
+              <block type="math_number" id="qg{ceX+r4.`k^vf/ZOo+">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="oPUTHs2A{Xr_LF,^U[~:">
+                <field name="VAR" id="m@MhjG.j@K``cEgRME)m" variabletype="">totaalV</field>
+                <value name="VALUE">
+                  <block type="math_number" id="|{g/o}0d#Ga.qlZIudwS">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="e,o5dx#N-D8c,k0zaQQ6">
+                    <field name="VAR" id="45MuL-jAc)VDd,W|gzle" variabletype="">totaalX</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="mWIL:.f${A8q[ck$T;n9">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="pdTSS%=tk{81k1AcldLx">
+                        <field name="VAR" id="Ram_b:+pS{RjU_waLVnB" variabletype="">totaalLeeftijd</field>
+                        <value name="VALUE">
+                          <block type="math_number" id="n+s4s3bAdN+rn;wXKu.F">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="STd,wYuUWjQ@8ccqB9Gu">
+                            <field name="VAR" id="pW@IfsZXrTj)?L6lFCw8" variabletype="">totaalSurf0</field>
+                            <value name="VALUE">
+                              <block type="math_number" id="=Een0.~p!_z?fY`oIHtO">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="variables_set" id="H-=1-;40A@G7_nZwj|*J">
+                                <field name="VAR" id="yZbkKNQRIU$jC-oRgMN-" variabletype="">totaalSurf1</field>
+                                <value name="VALUE">
+                                  <block type="math_number" id="8D=y~0zQ/6h|2.!I*ifx">
+                                    <field name="NUM">0</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="variables_set" id="dkJQ~#9HoWft^K~gyV=5">
+                                    <field name="VAR" id="Q!XC@}=cnvl$)HYf3U:}" variabletype="">totaalSurf2</field>
+                                    <value name="VALUE">
+                                      <block type="math_number" id="5^YN,o(I{0Cs+.=t*5|{">
+                                        <field name="NUM">0</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="variables_set" id="p@[ak4vQJ=zeR,@:j9P#">
+                                        <field name="VAR" id="D{+5w3,tAwoO]l{IZ.XL" variabletype="">totaalSurf3</field>
+                                        <value name="VALUE">
+                                          <block type="math_number" id="F,g*j|]UMSvZ5*lTr3na">
+                                            <field name="NUM">0</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="variables_set" id="2tka:[w!{J`bYH*NCJbI">
+                                            <field name="VAR" id="S0boN}zB{4%L:6pe8GRy" variabletype="">persoonTellen</field>
+                                            <value name="VALUE">
+                                              <block type="math_number" id="+Y]nO.nOCTLfT#Ow{3GT">
+                                                <field name="NUM">0</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="controls_whileUntil" id="lx@JUDhpeWDo-e@RHq_4">
+                                                <field name="MODE">WHILE</field>
+                                                <next>
+                                                  <block type="text_print" id="ZDC5x^{!!L`7M~HE}Wsk">
+                                                    <next>
+                                                      <block type="text_print" id=".ef(P5#kF(N4N%/iDJdY">
+                                                        <value name="TEXT">
+                                                          <block type="text_join" id="nfg*gc{Xe}PsP2ZL3Cx~">
+                                                            <mutation items="2"></mutation>
+                                                            <value name="ADD0">
+                                                              <block type="text" id="M,s]ALE]w3_,icfL`swK">
+                                                                <field name="TEXT">TotaalM:</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="ADD1">
+                                                              <block type="variables_get" id="ZaOjs9I!,*)*,n9!,5^[">
+                                                                <field name="VAR" id="#eR{+/I[}CbmvF8kwey)" variabletype="">totaalM</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="text_print" id="I#o.M8=)x0sn@XLW~CHd">
+                                                            <value name="TEXT">
+                                                              <block type="text_join" id="sCN0`s3ec^B!fYEGNk@f">
+                                                                <mutation items="2"></mutation>
+                                                                <value name="ADD0">
+                                                                  <block type="text" id="-PW0/5|+td/^fSQ$r8,N">
+                                                                    <field name="TEXT">TotaalV:</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="ADD1">
+                                                                  <block type="variables_get" id="w$*AP5cC#@4su$x5Yx*]">
+                                                                    <field name="VAR" id="m@MhjG.j@K``cEgRME)m" variabletype="">totaalV</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="text_print" id="oo;,:ZWBoU;^:WkGMpK)">
+                                                                <value name="TEXT">
+                                                                  <block type="text_join" id="wS2~gtyyk23.*;`_aXIA">
+                                                                    <mutation items="2"></mutation>
+                                                                    <value name="ADD0">
+                                                                      <block type="text" id="N%JpxpMJXPudER8)NJe6">
+                                                                        <field name="TEXT">TotaalX:</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="ADD1">
+                                                                      <block type="variables_get" id="xEGE[|FHE10(Jmf~SBt%">
+                                                                        <field name="VAR" id="45MuL-jAc)VDd,W|gzle" variabletype="">totaalX</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="text_print" id="T?1g5@EGX`=YL6v,Hhki">
+                                                                    <next>
+                                                                      <block type="text_print" id="V/HW,zIRf9qef+E2Y-0g">
+                                                                        <value name="TEXT">
+                                                                          <block type="text_join" id="5Z-pz~o_{uGK;5Ao);Zx">
+                                                                            <mutation items="2"></mutation>
+                                                                            <value name="ADD0">
+                                                                              <block type="text" id="M,vY:s|]O?$.]*p{Wi!f">
+                                                                                <field name="TEXT">Gemiddelde leeftijd geen surfers:</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <value name="ADD1">
+                                                                              <block type="variables_get" id="!7+6yN1#o3Qy-uM+Dgi,">
+                                                                                <field name="VAR" id="45MuL-jAc)VDd,W|gzle" variabletype="">totaalX</field>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="text_print" id="8a4j,a+1;Q=h#dG`;OPk">
+                                                                            <value name="TEXT">
+                                                                              <block type="text_join" id="[v;L0,Bd#X7!Rp`YLa[k">
+                                                                                <mutation items="2"></mutation>
+                                                                                <value name="ADD0">
+                                                                                  <block type="text" id="S%+(Bic}Uv||u4Earra`">
+                                                                                    <field name="TEXT">Gemiddelde leeftijd zelden surfers:</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <value name="ADD1">
+                                                                                  <block type="variables_get" id="$UPEkhV%ld=)k7s!U8Em">
+                                                                                    <field name="VAR" id="45MuL-jAc)VDd,W|gzle" variabletype="">totaalX</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                              </block>
+                                                                            </value>
+                                                                            <next>
+                                                                              <block type="text_print" id="r%AZ3t`cBQvx_/C#@=8H">
+                                                                                <value name="TEXT">
+                                                                                  <block type="text_join" id="uF-0[gs0g{g=o?`c~L8{">
+                                                                                    <mutation items="2"></mutation>
+                                                                                    <value name="ADD0">
+                                                                                      <block type="text" id="4sF3]@YGQb^sHO92CvkG">
+                                                                                        <field name="TEXT">Gemiddelde leeftijd regelmatige surfers:</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <value name="ADD1">
+                                                                                      <block type="variables_get" id="E@P#SeJJ9+$#w5TErL(t">
+                                                                                        <field name="VAR" id="45MuL-jAc)VDd,W|gzle" variabletype="">totaalX</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <next>
+                                                                                  <block type="text_print" id="e$GQm1=@tL0PPRCY[[%i">
+                                                                                    <value name="TEXT">
+                                                                                      <block type="text_join" id="_pH~AEYvB)EGU_mu,x](">
+                                                                                        <mutation items="2"></mutation>
+                                                                                        <value name="ADD0">
+                                                                                          <block type="text" id="%%8DpG7-p,}dZw*^F2Ci">
+                                                                                            <field name="TEXT">Gemiddelde leeftijd veel surfers:</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="ADD1">
+                                                                                          <block type="variables_get" id="ZICu+URdGsqk(xBCUN+k">
+                                                                                            <field name="VAR" id="45MuL-jAc)VDd,W|gzle" variabletype="">totaalX</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

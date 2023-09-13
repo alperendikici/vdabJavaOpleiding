@@ -1,0 +1,372 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="cyrQGmeg#_kLHrpLbh4#">temperatuur</variable>
+    <variable type="" id="/LLaS;?xHt].[mv:4Zb7">aanPos</variable>
+    <variable type="" id="XZiL.5uu*lsa|V//MV3K">aanNeg</variable>
+    <variable type="" id="}8#QSz9!haEz2fQ#EXw.">aanZero</variable>
+    <variable type="" id="3-qnQHl^dS|h?z;yoTs?">gemPos</variable>
+    <variable type="" id="d{Vfe|y[(#OgWa9I3QxZ">gemNeg</variable>
+    <variable type="" id="J;=S2HA1U$]8b5+0M41t">som</variable>
+    <variable type="" id="zh_@ptSqNZ=wQTUVY_gM">somPos</variable>
+    <variable type="" id="4XP=:$tGA^J/Xc~pkvB;">somNeg</variable>
+  </variables>
+  <block type="variables_set" id="Uv+5{Wq`VXLpz2{^?~Pe" x="571" y="71">
+    <field name="VAR" id="cyrQGmeg#_kLHrpLbh4#" variabletype="">temperatuur</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="k`!bM(NFG8(rO%~tC:/:">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="LM%]UNcIBvLc{Oo|`{c3">
+            <field name="TEXT">Temperatuur (99 om te stoppen)</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="bA_KEXQ:DZsn}ES6WzZR">
+        <field name="VAR" id="/LLaS;?xHt].[mv:4Zb7" variabletype="">aanPos</field>
+        <value name="VALUE">
+          <block type="math_number" id="W{H/@=oA[R~*hG5tzf^m">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="dbz3Ha853t~qE11-9^T!">
+            <field name="VAR" id="XZiL.5uu*lsa|V//MV3K" variabletype="">aanNeg</field>
+            <value name="VALUE">
+              <block type="math_number" id="Np{oFKq7IIg6*M.[tu2$">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="0|(Q}{!ZJ`r,R%qxTNX?">
+                <field name="VAR" id="}8#QSz9!haEz2fQ#EXw." variabletype="">aanZero</field>
+                <value name="VALUE">
+                  <block type="math_number" id="H{iM%{#C.=Mg$V~%Zdri">
+                    <field name="NUM">0</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="vaUt3(WISo4C.4$[YKx%">
+                    <field name="VAR" id="zh_@ptSqNZ=wQTUVY_gM" variabletype="">somPos</field>
+                    <value name="VALUE">
+                      <block type="math_number" id=",+X4NP{jzk{K~Eq*2Q[M">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="`Jk$%rc[,(g(?B{OFPM@">
+                        <field name="VAR" id="4XP=:$tGA^J/Xc~pkvB;" variabletype="">somNeg</field>
+                        <value name="VALUE">
+                          <block type="math_number" id="-qoC)GI2DK;Eoamh;Vm1">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="controls_whileUntil" id="(l^H-`8cFl[KL0bjQqPQ">
+                            <field name="MODE">WHILE</field>
+                            <value name="BOOL">
+                              <block type="logic_compare" id="0]V~kk}ZtJ-1=Y$N*{}A">
+                                <field name="OP">NEQ</field>
+                                <value name="A">
+                                  <block type="variables_get" id="1YY=/XP`ea+H5n.YI2ak">
+                                    <field name="VAR" id="cyrQGmeg#_kLHrpLbh4#" variabletype="">temperatuur</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id=":%4=)tL#56%HOmy@WSCJ">
+                                    <field name="NUM">99</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO">
+                              <block type="controls_if" id="=0L]|w5c;w^+;:9m?1LX">
+                                <mutation elseif="1" else="1"></mutation>
+                                <value name="IF0">
+                                  <block type="logic_compare" id="7:}n{mGtd=8dAh^WZ/-@">
+                                    <field name="OP">GT</field>
+                                    <value name="A">
+                                      <block type="variables_get" id=")G~]jk(VaTfudm2ruN1Z">
+                                        <field name="VAR" id="cyrQGmeg#_kLHrpLbh4#" variabletype="">temperatuur</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="4fq|.%|zvs-x6%H`yQq9">
+                                        <field name="NUM">0</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO0">
+                                  <block type="math_change" id="/Zz)}81,W!9_fHh)LI$v">
+                                    <field name="VAR" id="/LLaS;?xHt].[mv:4Zb7" variabletype="">aanPos</field>
+                                    <value name="DELTA">
+                                      <shadow type="math_number" id="x%08LFG!_pr^Z^qJdMUp">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="math_change" id="1PCmMxd)8S?Y0TrVV%+$">
+                                        <field name="VAR" id="zh_@ptSqNZ=wQTUVY_gM" variabletype="">somPos</field>
+                                        <value name="DELTA">
+                                          <shadow type="math_number" id="$?)qhwZZ60~Zspa7SEZ?">
+                                            <field name="NUM">1</field>
+                                          </shadow>
+                                          <block type="variables_get" id=".x+fy3[)l#*Ztng3WyYo">
+                                            <field name="VAR" id="cyrQGmeg#_kLHrpLbh4#" variabletype="">temperatuur</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                                <value name="IF1">
+                                  <block type="logic_compare" id="B4vF}!Y_^znMu+,88LV+">
+                                    <field name="OP">LT</field>
+                                    <value name="A">
+                                      <block type="variables_get" id="6;m^U`1x*cWoo:(az8Xp">
+                                        <field name="VAR" id="cyrQGmeg#_kLHrpLbh4#" variabletype="">temperatuur</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="bmru@T/iw:Yu=RhQiNbO">
+                                        <field name="NUM">0</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO1">
+                                  <block type="math_change" id="/U/nY9y?QIl[u9q1}UaM">
+                                    <field name="VAR" id="XZiL.5uu*lsa|V//MV3K" variabletype="">aanNeg</field>
+                                    <value name="DELTA">
+                                      <shadow type="math_number" id="t~LQnYQ|CJ{N$*(i7,sN">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                    </value>
+                                    <next>
+                                      <block type="math_change" id="U.3}vKn6FLk)=CKh~PX3">
+                                        <field name="VAR" id="4XP=:$tGA^J/Xc~pkvB;" variabletype="">somNeg</field>
+                                        <value name="DELTA">
+                                          <shadow type="math_number" id="$?)qhwZZ60~Zspa7SEZ?">
+                                            <field name="NUM">1</field>
+                                          </shadow>
+                                          <block type="variables_get" id="|Z{:mDI#-~t8[mfNihqI">
+                                            <field name="VAR" id="cyrQGmeg#_kLHrpLbh4#" variabletype="">temperatuur</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                                <statement name="ELSE">
+                                  <block type="math_change" id="d@FklsW$[ZgYg_ZsEjRV">
+                                    <field name="VAR" id="}8#QSz9!haEz2fQ#EXw." variabletype="">aanZero</field>
+                                    <value name="DELTA">
+                                      <shadow type="math_number" id="Z4#qJSz,5t@O4!UFd!aq">
+                                        <field name="NUM">1</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="variables_set" id="]a.WWwIflvM;H,FPt#QX">
+                                    <field name="VAR" id="cyrQGmeg#_kLHrpLbh4#" variabletype="">temperatuur</field>
+                                    <value name="VALUE">
+                                      <block type="text_prompt_ext" id="}#ziSP9WhP0MMq-iFiND">
+                                        <mutation type="NUMBER"></mutation>
+                                        <field name="TYPE">NUMBER</field>
+                                        <value name="TEXT">
+                                          <block type="text" id="}Zx0Wn{8Y9:].O1)A+zu">
+                                            <field name="TEXT">Temperatuur (99 om te stoppen)</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="text_print_sameline" id="OdgVSR`|U;Rrh(,5N:#w">
+                                <value name="TEXT">
+                                  <block type="text" id="SOagnrl@QQdRqGTQJ$wM">
+                                    <field name="TEXT">Het aantal positieve tempaturen: </field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="text_print" id="mT8mM`#=@7lQR^)s,v(0">
+                                    <value name="TEXT">
+                                      <block type="variables_get" id=")agUC$6%qN,~rD,4opE^">
+                                        <field name="VAR" id="/LLaS;?xHt].[mv:4Zb7" variabletype="">aanPos</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="text_print_sameline" id="[}RdR+GVos?1!rVuyZBO">
+                                        <value name="TEXT">
+                                          <block type="text" id="{p(B;G#~bxL}6ds;{5}O">
+                                            <field name="TEXT">Het aantal negatieve tempaturen: </field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="text_print" id="q1iK5!]ItW;Dll)*(-yz">
+                                            <value name="TEXT">
+                                              <block type="variables_get" id="M*RVJ?ksH+URWk.6dm?-">
+                                                <field name="VAR" id="XZiL.5uu*lsa|V//MV3K" variabletype="">aanNeg</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="text_print_sameline" id="q8Nvl%WdHa66dMd4;6s|">
+                                                <value name="TEXT">
+                                                  <block type="text" id="TQ,ivtl(-9Yc;B[Yt}/E">
+                                                    <field name="TEXT">Het aantal nul-tempaturen: </field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="text_print" id="V)H7fje80%m=1J+gF-I)">
+                                                    <value name="TEXT">
+                                                      <block type="variables_get" id="eE5;d16ibds1}wczDjd{">
+                                                        <field name="VAR" id="}8#QSz9!haEz2fQ#EXw." variabletype="">aanZero</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="controls_if" id="IDx~8y|UKQQ|)N~}j{nH">
+                                                        <value name="IF0">
+                                                          <block type="logic_compare" id="lf}%@E_9R!ih1?PQZo~N">
+                                                            <field name="OP">GT</field>
+                                                            <value name="A">
+                                                              <block type="variables_get" id=")ah,I~iv1{3nhe4h.-WC">
+                                                                <field name="VAR" id="/LLaS;?xHt].[mv:4Zb7" variabletype="">aanPos</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="B">
+                                                              <block type="math_number" id="x/@J^a):LXr#Rv1PVD[8">
+                                                                <field name="NUM">0</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <statement name="DO0">
+                                                          <block type="variables_set" id="|eKEMx|)S##t~so/eAFv">
+                                                            <field name="VAR" id="3-qnQHl^dS|h?z;yoTs?" variabletype="">gemPos</field>
+                                                            <value name="VALUE">
+                                                              <block type="math_arithmetic" id="ULC=lZex](_kIsM8WHb5">
+                                                                <field name="OP">DIVIDE</field>
+                                                                <value name="A">
+                                                                  <block type="variables_get" id="lzN8PdX!j?KaBiOIdIuL">
+                                                                    <field name="VAR" id="zh_@ptSqNZ=wQTUVY_gM" variabletype="">somPos</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="B">
+                                                                  <block type="variables_get" id="eGM2g?p[}}TuX5wSk%C[">
+                                                                    <field name="VAR" id="/LLaS;?xHt].[mv:4Zb7" variabletype="">aanPos</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="text_print_sameline" id="/}E-Y=BmC@Nv_$fTg4*^">
+                                                                <value name="TEXT">
+                                                                  <block type="text" id="wg=rNZ]AZgg#YE/Xc~jp">
+                                                                    <field name="TEXT">Het gemiddelde van de positieve tempaturen: </field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="text_print" id=":u`5zEtK~V{Wq`H+jP;r">
+                                                                    <value name="TEXT">
+                                                                      <block type="variables_get" id=".f|mYe]d=q;(9T82it_q">
+                                                                        <field name="VAR" id="3-qnQHl^dS|h?z;yoTs?" variabletype="">gemPos</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </statement>
+                                                        <next>
+                                                          <block type="controls_if" id="f}h1Qk[RLK_yR[$nt:BQ">
+                                                            <value name="IF0">
+                                                              <block type="logic_compare" id=".oD$q#MWGW+e6_]dLFn0">
+                                                                <field name="OP">GT</field>
+                                                                <value name="A">
+                                                                  <block type="variables_get" id=";0D2{Q,3i_JEJ_v?()i!">
+                                                                    <field name="VAR" id="XZiL.5uu*lsa|V//MV3K" variabletype="">aanNeg</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="B">
+                                                                  <block type="math_number" id="R0od;[pgfv]pO2yVou}6">
+                                                                    <field name="NUM">0</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <statement name="DO0">
+                                                              <block type="variables_set" id="9XW6zYhUoP(=cJ}6e(i}">
+                                                                <field name="VAR" id="d{Vfe|y[(#OgWa9I3QxZ" variabletype="">gemNeg</field>
+                                                                <value name="VALUE">
+                                                                  <block type="math_arithmetic" id="B6%0enQ:TE1@`}s$q{7k">
+                                                                    <field name="OP">DIVIDE</field>
+                                                                    <value name="A">
+                                                                      <block type="variables_get" id="}rJd{5|K(hmFWQo:G/e?">
+                                                                        <field name="VAR" id="4XP=:$tGA^J/Xc~pkvB;" variabletype="">somNeg</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="B">
+                                                                      <block type="variables_get" id="-]dm^BGKM.|/9=C~Fyo2">
+                                                                        <field name="VAR" id="XZiL.5uu*lsa|V//MV3K" variabletype="">aanNeg</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="text_print_sameline" id="KH;/x`7`qWA6,cXQE3P7">
+                                                                    <value name="TEXT">
+                                                                      <block type="text" id="tCcBI!UB/_fL:d/F$4^v">
+                                                                        <field name="TEXT">Het gemiddelde van de negatieve tempaturen: </field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="text_print" id="@}.)Y!qA=9o=UUxnBfc$">
+                                                                        <value name="TEXT">
+                                                                          <block type="variables_get" id="}u#[QT_zb{dEJv,H^J}|">
+                                                                            <field name="VAR" id="d{Vfe|y[(#OgWa9I3QxZ" variabletype="">gemNeg</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </statement>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

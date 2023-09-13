@@ -1,0 +1,66 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="]e`SDub!B@}0bN9Z?4@j">getal</variable>
+  </variables>
+  <block type="variables_set" id="r-(6_S!seIO3qLCw=$yH" x="473" y="107">
+    <field name="VAR" id="]e`SDub!B@}0bN9Z?4@j" variabletype="">getal</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="vN{*Z;!Ojm`((?}ZW|lJ">
+        <mutation type="TEXT"></mutation>
+        <field name="TYPE">TEXT</field>
+        <value name="TEXT">
+          <block type="text" id="AW3y?EmrPz1P=Z#-Z+lG">
+            <field name="TEXT">Typt uw getal</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="controls_if" id="X-Yw,0^bzR.();~)vd6B">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="B3oqLAz;7DZLwR/[2PRA">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="math_modulo" id="J|YlmzBI^SUbG`8myA?f">
+                <value name="DIVIDEND">
+                  <block type="variables_get" id="oy9G_9wt_LwW:-BophO(">
+                    <field name="VAR" id="]e`SDub!B@}0bN9Z?4@j" variabletype="">getal</field>
+                  </block>
+                </value>
+                <value name="DIVISOR">
+                  <block type="math_number" id="iikYX8Fg/:7}:afT]N36">
+                    <field name="NUM">2</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="u?kL#Ub=Ch0_jNi_k0^.">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="text_print" id="|P([u_Kna;F|B*d:J=h8">
+            <value name="TEXT">
+              <block type="text" id="hz)*W_dgwNYYixDh6;@#">
+                <field name="TEXT">Even.</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="text_print" id="MPv)]os-i?D2inB1Otjs">
+            <value name="TEXT">
+              <block type="text" id="NvBUY0C.:qmXW(P+1$qc">
+                <field name="TEXT">Oneven.</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>

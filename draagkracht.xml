@@ -1,0 +1,102 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id=",p[pYuBI*$l[wU-r;N0E">lengte</variable>
+    <variable type="" id="(7Fpu,|I:^Kt1Pl(J{qY">breedte</variable>
+    <variable type="" id="0=@]`5XU58{DTI7,,YoG">hoogte</variable>
+  </variables>
+  <block type="variables_set" id="oqGCGFz+3M,3zcv$*]XT" x="456" y="118">
+    <field name="VAR" id=",p[pYuBI*$l[wU-r;N0E" variabletype="">lengte</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id="zUrV*1`qPg*V^gz?1r]B">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="mNQ.$4xHcaeA5-b|7yuR">
+            <field name="TEXT">wat is die lengte</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="mTgpww13}^9:3MWLyiLH">
+        <field name="VAR" id="(7Fpu,|I:^Kt1Pl(J{qY" variabletype="">breedte</field>
+        <value name="VALUE">
+          <block type="text_prompt_ext" id="cPvoB8YhD^{m1cTFf1cd">
+            <mutation type="NUMBER"></mutation>
+            <field name="TYPE">NUMBER</field>
+            <value name="TEXT">
+              <block type="text" id=".3^mD0Aa;m}tHYz[l:0[">
+                <field name="TEXT">wat is die breedte</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="ti{!]3nGfT}}$]j?CUD.">
+            <field name="VAR" id="0=@]`5XU58{DTI7,,YoG" variabletype="">hoogte</field>
+            <value name="VALUE">
+              <block type="text_prompt_ext" id="E`nUGsSXk(_twv1|d+J7">
+                <mutation type="NUMBER"></mutation>
+                <field name="TYPE">NUMBER</field>
+                <value name="TEXT">
+                  <block type="text" id="0]l{F5bmw:g)8|kRk?N#">
+                    <field name="TEXT">wat is die hoogte</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="text_print" id=",7k,FO6kv6WUz.XaLE`*">
+                <value name="TEXT">
+                  <block type="math_arithmetic" id="lrqXy#^!H#e+)f2`e^.5">
+                    <field name="OP">DIVIDE</field>
+                    <value name="A">
+                      <block type="math_arithmetic" id="w?tKqtmP+dr]WZX=z2lH">
+                        <field name="OP">MULTIPLY</field>
+                        <value name="A">
+                          <block type="math_number" id="~goyd:pRzeSJ!Qyp)pI7">
+                            <field name="NUM">19</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_arithmetic" id="d*:0rn*nh/0]d:#D6v|r">
+                            <field name="OP">MULTIPLY</field>
+                            <value name="A">
+                              <block type="variables_get" id="`ciYqpEfkyf4Qk4!N=1k">
+                                <field name="VAR" id="(7Fpu,|I:^Kt1Pl(J{qY" variabletype="">breedte</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_arithmetic" id="6R2#4`b/XAi9*)ryYk~6">
+                                <field name="OP">MULTIPLY</field>
+                                <value name="A">
+                                  <block type="variables_get" id="rEJzYm0Xr@|nE}9hzy~y">
+                                    <field name="VAR" id="0=@]`5XU58{DTI7,,YoG" variabletype="">hoogte</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="variables_get" id="(J.)={[_cb~)#^ebwjxx">
+                                    <field name="VAR" id="0=@]`5XU58{DTI7,,YoG" variabletype="">hoogte</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="variables_get" id=":Nc5:;~qgCI?R83MYF(g">
+                        <field name="VAR" id=",p[pYuBI*$l[wU-r;N0E" variabletype="">lengte</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

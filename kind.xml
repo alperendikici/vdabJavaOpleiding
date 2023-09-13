@@ -1,0 +1,75 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="J6tSi,~;:iPH?k_/`L@$">lijftijd</variable>
+  </variables>
+  <block type="variables_set" id="~yM,Q*lw%VqW8n*PEuz{" x="471" y="113">
+    <field name="VAR" id="J6tSi,~;:iPH?k_/`L@$" variabletype="">lijftijd</field>
+    <value name="VALUE">
+      <block type="text_prompt_ext" id=";734h;877s]G4i+xcQ2C">
+        <mutation type="NUMBER"></mutation>
+        <field name="TYPE">NUMBER</field>
+        <value name="TEXT">
+          <block type="text" id="_/xe%01`XUaht$y+hj65">
+            <field name="TEXT">Hou oud ben jij?</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <next>
+      <block type="controls_if" id="69iCoGJly4Zt:`W;vA)r">
+        <value name="IF0">
+          <block type="logic_compare" id="aYufc]]!:V}%th|Dx9a4">
+            <field name="OP">GTE</field>
+            <value name="A">
+              <block type="variables_get" id="CER+WnW77VRHPxOqc5pO">
+                <field name="VAR" id="J6tSi,~;:iPH?k_/`L@$" variabletype="">lijftijd</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="Y*3d[,b,vH5o6$t%[Z#0">
+                <field name="NUM">18</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="text_print" id="jG,JP9Dj[TXHg:s@s}`3">
+            <value name="TEXT">
+              <block type="text" id="Kxo.@vf$8,p./{GX=x6%">
+                <field name="TEXT">Je bent volwassen</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_if" id="*1RIzO-;B(Kihi%EEVQP">
+            <value name="IF0">
+              <block type="logic_compare" id="D,-?T_UbC=I)l5Aw0H_b">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <block type="variables_get" id="JpCw](:1(SFB=){kuy:9">
+                    <field name="VAR" id="J6tSi,~;:iPH?k_/`L@$" variabletype="">lijftijd</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="V[OT~g[S{zt^kP|X*o~T">
+                    <field name="NUM">18</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="text_print" id="V3wYb8rQO@B*N1)9Rt4F">
+                <value name="TEXT">
+                  <block type="text" id="BF^^xlzyD~.mJG4,*O_K">
+                    <field name="TEXT">Je bent een kind</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,30 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables></variables>
+  <block type="text_print" id="LN:vHxOh!0w])dH?;-Ea" x="-67" y="12">
+    <value name="TEXT">
+      <block type="math_arithmetic" id="^?+d;pBKdJsu:Z/K]#De">
+        <field name="OP">MULTIPLY</field>
+        <value name="A">
+          <block type="math_number" id="rBtX!=N:KFaj,tG{sL{4">
+            <field name="NUM">100</field>
+          </block>
+        </value>
+        <value name="B">
+          <block type="math_arithmetic" id="r?E~3Llfy}!gI;R:MGVA">
+            <field name="OP">DIVIDE</field>
+            <value name="A">
+              <block type="math_number" id="?=M7P].DUW5P]R=jM**f">
+                <field name="NUM">16</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="2_/7r9-)IwSJ*5jA?Hg`">
+                <field name="NUM">20</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>
